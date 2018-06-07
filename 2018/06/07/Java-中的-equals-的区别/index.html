@@ -88,14 +88,14 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 中的 ==, equals 的区别">
+<meta property="og:url" content="http://yoursite.com/2018/06/07/Java-中的-equals-的区别/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-14T05:53:58.777Z">
+<meta property="og:updated_time" content="2018-06-07T03:22:29.350Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="Java 中的 ==, equals 的区别">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/07/Java-中的-equals-的区别/"/>
 
 
 
 
 
-  <title>about | Hexo</title>
+  <title>Java 中的 ==, equals 的区别 | Hexo</title>
   
 
 
@@ -315,33 +315,258 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/Java-中的-equals-的区别/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">Java 中的 ==, equals 的区别</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-07T11:22:29+08:00">
+                2018-06-07
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2018-06-07T11:22:29+08:00">
+                2018-06-07
+              </time>
+            
+          </span>
+
           
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/07/Java-中的-equals-的区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/07/Java-中的-equals-的区别/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+            
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
         
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>请我一杯酸奶？</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat-reward.png" alt="John Doe WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="John Doe Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    John Doe
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://yoursite.com/2018/06/07/Java-中的-equals-的区别/" title="Java 中的 ==, equals 的区别">http://yoursite.com/2018/06/07/Java-中的-equals-的区别/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/03/Java 中的 ==, equals 的区别/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  <div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+ </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -567,9 +792,9 @@
  <script type="application/ld+json">
         {
             "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-            "@id": "http://yoursite.com/about/index.html",
+            "@id": "http://yoursite.com/2018/06/07/Java-中的-equals-的区别/",
             "appid": "1594371542399137",
-            "title": "about",
+            "title": "Java 中的 ==, equals 的区别",
             "images": [],
             "description": "",
             "pubDate": "2018-06-07T11:26:45"
@@ -1195,13 +1420,13 @@ $(document).ready(function () {
       var articles = db.collection('articles')
 
       //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = 'about'.length > 0
+      var isPost = 'Java 中的 ==, equals 的区别'.length > 0
       var isArchive = '' === 'true'
       var isCategory = ''.length > 0
       var isTag = ''.length > 0
 
       if (isPost) { //is article page
-        var title = 'about'
+        var title = 'Java 中的 ==, equals 的区别'
         var doc = articles.doc(title)
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))
