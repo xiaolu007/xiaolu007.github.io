@@ -40,17 +40,17 @@
   
     
     <entry>
+      <title>links</title>
+      <link href="/Links/index.html"/>
+      <url>/Links/index.html</url>
+      <content type="html"><![CDATA[<p>gyl_coder: <a href="https://gyl-coder.top/" target="_blank" rel="noopener">https://gyl-coder.top/</a></p>]]></content>
+    </entry>
+    
+    <entry>
       <title>about</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
-      <title>Links</title>
-      <link href="/Links/index.html"/>
-      <url>/Links/index.html</url>
-      <content type="html"><![CDATA[<p>gyl_coder: <a href="https://gyl-coder.top/" target="_blank" rel="noopener">https://gyl-coder.top/</a></p>]]></content>
     </entry>
     
     <entry>
