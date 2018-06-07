@@ -89,13 +89,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags//index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-14T05:53:50.160Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="Hexo">
 
 
 
@@ -125,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/tags//"/>
 
 
 
 
 
-  <title>tags | Hexo</title>
+  <title>Tag: == | Hexo</title>
   
 
 
@@ -162,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <!-- 在右上角实现fork me on github -->
@@ -303,36 +302,54 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
+  
+  
+  
+  <div class="post-block tag">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-        
-          
-        
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>==<small>Tag</small>
+        </h1>
       </div>
+
       
-      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/06/07/Java-中的-equals-的区别/" itemprop="url">
+              
+                <span itemprop="name">Java 中的 ==, equals 的区别</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-07T11:22:29+08:00"
+              content="2018-06-07" >
+          06-07
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
       
     </div>
-    
-    
-    
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -341,13 +358,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
 
         </div>
         
@@ -551,12 +561,12 @@
  <script type="application/ld+json">
         {
             "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-            "@id": "http://yoursite.com/tags/index.html",
+            "@id": "",
             "appid": "1594371542399137",
-            "title": "tags",
+            "title": "",
             "images": [],
             "description": "",
-            "pubDate": "2018-06-07T18:22:36"
+            "pubDate": "2018-06-07T18:26:34"
         }
     </script>
      -->
@@ -676,56 +686,11 @@
   <!-- 以下代码用于代码全选功能 -->
   
 
-<script>
-$(document).ready(function () {
-	var SelectText = function(element) {
-		var doc = document
-			, text = element
-			, range, selection
-		;
-		if (doc.body.createTextRange) {
-			range = document.body.createTextRange();
-			range.moveToElementText(text);
-			range.select();
-		} else if (window.getSelection) {
-			selection = window.getSelection();
-			range = document.createRange();
-			range.selectNodeContents(text);
-			selection.removeAllRanges();
-			selection.addRange(range);
-		}
-	};
-	$(".code").each(function() {
-		var code = $(this).get(0);
-		var button_html =
-			'<div style="position: fixed;'                                                               +
-						'right: 3%;'                                                                     +
-						'margin-top: 5px;'                                                               +
-						'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
-						'font-size: 10px;'                                                               +
-						'cursor: pointer;'                                                               +
-						'color: #FFB86C;'                                                                +
-						'">'                                                                             +
-			'<span>全选</span>'                                                                          +
-			'</div>';
-		var button = $(button_html);
-		$(button).click(function() {
-			SelectText(code);
-		});
-		$(button).insertBefore(this);
-	});
-});
-</script>
-
 
   
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
-
 
   
 
@@ -1179,14 +1144,72 @@ $(document).ready(function () {
       var articles = db.collection('articles')
 
       //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = 'tags'.length > 0
+      var isPost = ''.length > 0
       var isArchive = '' === 'true'
       var isCategory = ''.length > 0
       var isTag = ''.length > 0
 
       if (isPost) { //is article page
-        var title = 'tags'
+        var title = ''
         var doc = articles.doc(title)
+
+        getCount(doc, true).then(appendCountTo($('.post-meta')))
+      }
+      else if (!isArchive && !isCategory && !isTag) { //is index page
+        var titles = [] //array to titles
+
+        var postsstr = 'titles.push("Java 中的 ==, equals 的区别");' //if you have a better way to get titles of posts, please change it
+        eval(postsstr)
+
+        var promises = titles.map(function (title) {
+          return articles.doc(title)
+        }).map(function (doc) {
+          return getCount(doc)
+        })
+        Promise.all(promises).then(function (counts) {
+          var metas = $('.post-meta')
+          counts.forEach(function (val, idx) {
+            appendCountTo(metas[idx])(val)
+          })
+        })
+      }
+    })()
+  </script>
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+	<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+</body>
+</html>
+= articles.doc(title)
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))
       }
