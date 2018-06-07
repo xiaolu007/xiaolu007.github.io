@@ -47,6 +47,13 @@
     </entry>
     
     <entry>
+      <title>links</title>
+      <link href="/links/index.html"/>
+      <url>/links/index.html</url>
+      <content type="html"><![CDATA[<p>gyl_coder: <a href="https://gyl-coder.top/" target="_blank" rel="noopener">https://gyl-coder.top/</a></p>]]></content>
+    </entry>
+    
+    <entry>
       <title>about</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -54,24 +61,10 @@
     </entry>
     
     <entry>
-      <title>links</title>
-      <link href="/links/index-1.html"/>
-      <url>/links/index-1.html</url>
-      <content type="html"><![CDATA[<p>gyl_coder: <a href="https://gyl-coder.top/" target="_blank" rel="noopener">https://gyl-coder.top/</a></p>]]></content>
-    </entry>
-    
-    <entry>
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
-      <title>links</title>
-      <link href="/links/index.html"/>
-      <url>/links/index.html</url>
-      <content type="html"><![CDATA[<p>gyl_coder: <a href="https://gyl-coder.top/" target="_blank" rel="noopener">https://gyl-coder.top/</a></p>]]></content>
     </entry>
     
   
